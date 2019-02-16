@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的第一个highecharts项目</title>
+    <script src="js/highcharts.js"></script>
+</head>
+<body>
+    <div id="container" style="width: 600px;height: 400px;"></div>
+    <script type="text/javascript">
+        var options = {
+            //图表定义
+           chart:{
+               type:'bar' //定义图表类型
+           },
+            //标题定义
+            title:{
+               text:'我的第一个highechart'
+            },
+            //x轴定义
+            xAxis: {
+                categories: ['苹果', '香蕉', '橙子']   // x 轴分类
+            },
+            //y轴定义
+            yAxis: {
+               title:{
+                   text:'水果分类'  // y轴标题
+               }
+            },
+            series: [
+                {                              // 数据列
+                name: '小明',                        // 数据列名
+                data: [1, 0, 4]                     // 数据
+            },
+                {
+                name: '小红',
+                data: [5, 7, 3]
+            }]
+        };
+        // 图表初始化函数
+        var chart = Highcharts.chart('container', options);
+    </script>
+</body>
+</html>
